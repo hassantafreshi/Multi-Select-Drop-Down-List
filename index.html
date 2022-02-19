@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Form Builder</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"  href="assets/css/bootstrap-select.css"/>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-icons.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> -->
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+    <div class="my-5">
+        <!-- select list start -->
+        <div class=" efb listSelect my-2"> 
+          <!-- 
+                    data-id آی دی لیست باکس
+                    data-no تعداد انتخاب برای مولتی سلکت مشخص می کند
+                    data-parent قراردادی برای اینکه تشخصی دهیم دایو اصلی است
+                    data-select  شماره هر ردیف انتخابی را نگه می دارد
+                    data-icon اگر آیکون قرار است نمایش داده شود بجای تصویر مقدار یک است
+                   -->
+                   <div class="efb efblist mx-1  p-2 inplist  h-d-efb rounded-top border  border-primary" data-id="menu-1" data-no="10" data-parent="1" data-icon="1" data-select=""> Select an Option</div>
+                   <i class="efb efblist  h-d-efb iconDD bi-caret-down-fill text-primary" data-id="menu-1"></i>
+          <div class="efb efblist mx-1  listContent d-none rounded-bottom  bg-light" data-id="menu-1" data-list="menu-1">
+            <table class="efb table menu-1">
+                  <!-- 
+                    data-name نامی ردیف توسط کاربر نگه می دارد
+                    data-row یک شمارنده اتوماتیک است برای نگه داشتن و جستجو کردن
+                    data-state وضعیت انتخاب بود ردیف را نگه می دارد
+                    data-visible اگر 1 باشد ردیف را نمایش می دهد اگر صفر ردیف نمایش داده نمی شود 
+                   -->
+                    <thead class="efb efblist">
+                      <tr>
+                        <div class="efb searchSection efblist  p-2 bg-light">
+                          <i class="efb efblist  searchIcon  bi-search text-primary "></i>
+                          <input type="text" class="efb efblist search searchBox my-1 col-12 rounded border-primary" data-id="menu-1" data-tag="search" placeholder="Search" onkeyup="FunSearchTableEfb('menu-1')">
+                                                  
+                        </div>
+
+
+                      </tr>
+                    </thead>
+                    <tbody >
+                      <tr class="efblist" data-id="menu-1" data-name="Mark" data-row="1" data-state="0" data-visible="1">
+                        <th scope="row" class="bi-square"></th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        
+                      </tr>
+                      <tr class="efblist" data-id="menu-1" data-name="Jacob" data-row="2" data-state="0" data-visible="1">
+                        <th scope="row" class="bi-square"></th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr class="efblist" data-id="menu-1" data-name="Larry" data-row="3" data-state="0" data-visible="1">
+                        <th scope="row" class="bi-square"></th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                      <tr class="efblist" data-id="menu-1" data-name="Larr" data-row="4" data-state="0" data-visible="1">
+                        <th scope="row" class="bi-square"></th>
+                        <td>Larr</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                      <tr class="efblist" data-id="menu-1" data-name="Ehssan" data-row="5" data-state="0" data-visible="1">
+                        <th scope="row" class="bi-square"></th>
+                        <td>Ehssan</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                      <tr class="efblist" data-id="menu-1" data-name="Hassan" data-row="6" data-state="0" data-visible="1">
+                        <th scope="row" class="bi-square"></th>
+                        <td>Hassan</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+
+                      <tr class="efblist" data-id="menu-1" data-name="Hassan Hassan Hassan Hassan Hassan" data-row="7" data-state="0" data-visible="1">
+                        <th scope="row" class="bi-square"></th>
+                        <td>Hassan</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+        <!-- select list End -->
+        <button class="btn-lg btn-info" onclick="TempFun()">Get on Log</button>
+
+        <div class=" efb listSelect my-2"> 
+          <!-- 
+                    data-id آی دی لیست باکس
+                    data-no تعداد انتخاب برای مولتی سلکت مشخص می کند
+                    data-parent قراردادی برای اینکه تشخصی دهیم دایو اصلی است
+                    data-select  شماره هر ردیف انتخابی را نگه می دارد
+                    data-icon اگر آیکون قرار است نمایش داده شود بجای تصویر مقدار یک است
+                   -->
+                   <div class="efb efblist mx-1  p-2 inplist  h-d-efb rounded-top border  border-primary" data-id="menu-2" data-no="1" data-parent="1" data-icon="1" data-select=""> Select an Option</div>
+                   <i class="efb efblist  h-d-efb iconDD bi-caret-down-fill text-primary" data-id="menu-2"></i>
+          <div class="efb efblist mx-1  listContent d-none rounded-bottom  bg-light" data-id="menu-2" data-list="menu-2">
+            <table class="efb table menu-2">
+                  <!-- 
+                    data-name نامی ردیف توسط کاربر نگه می دارد
+                    data-row یک شمارنده اتوماتیک است برای نگه داشتن و جستجو کردن
+                    data-state وضعیت انتخاب بود ردیف را نگه می دارد
+                    data-visible اگر 1 باشد ردیف را نمایش می دهد اگر صفر ردیف نمایش داده نمی شود 
+                   -->
+                    <thead class="efb efblist">
+                      <tr>
+                        <div class="efb searchSection efblist  p-2 bg-light">
+                          <i class="efb efblist  searchIcon  bi-search text-primary "></i>
+                          <input type="text" class="efb efblist search searchBox my-1 col-12 rounded border-primary" data-id="menu-2" data-tag="search" placeholder="Search" onkeyup="FunSearchTableEfb('menu-2')">
+                                                  
+                        </div>
+
+
+                      </tr>
+                    </thead>
+                    <tbody >
+                      <tr class="efblist" data-id="menu-2" data-name="Kobab" data-row="1" data-state="0" data-visible="1">
+                        <th scope="row" class="bi-square"></th>
+                        <td>Kobab</td>
+                        
+                      </tr>
+                      <tr class="efblist" data-id="menu-2" data-name="Passta" data-row="2" data-state="0" data-visible="1">
+                        <th scope="row" class="bi-square"></th>
+                        <td>Passta</td>                  
+                      </tr>
+                      <tr class="efblist" data-id="menu-2" data-name="Pizaa" data-row="3" data-state="0" data-visible="1">
+                        <th scope="row" class="bi-square"></th>
+                        <td>Pizaa</td>
+                   
+                      </tr>                    
+                     
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+
+ <!--    <script src="assets/js/admin.js"></script> -->
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<!-- <script src="assets/js/core.js"></script>
+<script src="assets/js/list_form.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/new.js"></script>
+<script src="assets/js/server.js"></script> -->
+</html>
